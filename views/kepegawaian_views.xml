@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="file_tree" model="ir.ui.view">
+            <field name="name">File Kepegawaian</field>
+            <field name="model">data.kepegawaian</field>
+            <field name="arch" type="xml">
+                <tree string="">
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="file_form" model="ir.ui.view">
+            <field name="name">File Kepegawaian</field>
+            <field name="model">data.kepegawaian</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group string="file">
+                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record id="file_action" model="ir.actions.act_window">
+            <field name="name">File Kepegawaian</field>
+            <field name="res_model">data.kepegawaian</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record id="absensi_tree" model="ir.ui.view">
+            <field name="name">Absensi Pegawai</field>
+            <field name="model">data.kepegawaian</field>
+            <field name="arch" type="xml">
+                <tree string="">
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="absensi_form" model="ir.ui.view">
+            <field name="name">Absensi Pegawai</field>
+            <field name="model">data.kepegawaian</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group string="Absensi Pegawai">
+                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record id="absensi_action" model="ir.actions.act_window">
+            <field name="name">Absensi Pegawai</field>
+            <field name="res_model">data.kepegawaian</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="pengembangan_tree" model="ir.ui.view">
+            <field name="name">Pengembangan Karir</field>
+            <field name="model">data.kepegawaian</field>
+            <field name="arch" type="xml">
+                <tree string="">
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="pengembangan_form" model="ir.ui.view">
+            <field name="name">Pengembangan Karir</field>
+            <field name="model">data.kepegawaian</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group string="Pengembangan Karir">
+                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record id="pengembangan_action" model="ir.actions.act_window">
+            <field name="name">Pengembangan Karir</field>
+            <field name="res_model">data.kepegawaian</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="perizinan_tree" model="ir.ui.view">
+            <field name="name">Perizinan</field>
+            <field name="model">data.kepegawaian</field>
+            <field name="arch" type="xml">
+                <tree string="">
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="perizinan_form" model="ir.ui.view">
+            <field name="name">Perizinan</field>
+            <field name="model">data.kepegawaian</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group string="Perizinan">
+                            
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record id="perizinan_action" model="ir.actions.act_window">
+            <field name="name">Perizinan</field>
+            <field name="res_model">data.kepegawaian</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="tatausaha_menu_root"
+            name="Tata Usaha"
+            sequence="100"/>
+
+        <!-- -->
+        <menuitem id="kepegawaian_menu_categ" 
+            name="Kepegawaiaan" 
+            parent="tatausaha_menu_root"
+            sequence="10"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem 
+            id="file_menu_act" 
+            name="File Kepegawaian" 
+            parent="kepegawaian_menu_categ" 
+            action="file_action" 
+            sequence="1"/>
+
+        <menuitem 
+            id="absensi_menu_act" 
+            name="Absensi Kepegawaian" 
+            parent="kepegawaian_menu_categ" 
+            action="absensi_action" 
+            sequence="2"/>
+
+        <menuitem 
+            id="pengembangan_menu_act" 
+            name="Pengembangan Karir" 
+            parent="kepegawaian_menu_categ" 
+            action="pengembangan_action" 
+            sequence="3"/>
+
+        <menuitem 
+            id="perizinan_menu_act" 
+            name="Perizinan" 
+            parent="kepegawaian_menu_categ" 
+            action="perizinan_action" 
+            sequence="4"/>
+    </data>
+</odoo>

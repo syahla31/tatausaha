@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_all_data_suratmasuk,all_data_suratmasuk,model_surat_masuk,,1,1,1,1
+access_all_data_penugasan,all_data_penugasan,model_data_penugasan,,1,1,1,1
+access_all_data_dapodik,all_data_dapodik,model_data_dapodik,,1,1,1,1
+access_all_data_humas,all_data_humas,model_data_humas,,1,1,1,1
+access_all_data_kepegawaian,all_data_kepegawaian,model_data_kepegawaian,,1,1,1,1
+access_all_data_kesiswaan,all_data_kesiswaan,model_data_kesiswaan,,1,1,1,1
+access_all_data_keuangan,all_data_keuangan,model_data_keuangan,,1,1,1,1
+access_all_data_kurikulum,all_data_kurikulum,model_data_kurikulum,,1,1,1,1
+access_all_data_sarpras,all_data_sarpras,model_data_sarpras,,1,1,1,1

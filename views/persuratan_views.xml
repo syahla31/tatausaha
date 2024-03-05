@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="suratmasuk_tree" model="ir.ui.view">
+            <field name="name">Surat Masuk</field>
+            <field name="model">surat.masuk</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="no" />
+                        <field name="tanggal" />
+                        <field name="tofrom" />
+                        <field name="ringkasan" />
+                        <field name="keterangan" />
+                        <field name="file_surat" type="binary"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="suratmasuk_form" model="ir.ui.view">
+            <field name="name">Surat Masuk</field>
+            <field name="model">surat.masuk</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group string="Surat Masuk">
+                            <field name="no" />
+                            <field name="tanggal" />
+                            <field name="tofrom" />
+                            <field name="ringkasan" />
+                            <field name="keterangan" />
+                            <field name="file_surat" type="binary"/>
+                        </group>
+                        <group string="Surat">
+                            <field name="nosurat" />
+                            <field name="tanggalsurat" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record id="penugasan_tree" model="ir.ui.view">
+            <field name="name">Penugasan</field>
+            <field name="model">data.penugasan</field>
+            <field name="arch" type="xml">
+                <tree string="">
+                    <field name="name" />
+                    <field name="jabatan" />
+                    <field name="niy" />
+                    <field name="alamat" />
+                    <field name="jam" />
+                    <field name="tempat" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="penugasan_form" model="ir.ui.view">
+            <field name="name">Penugasan</field>
+            <field name="model">data.penugasan</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                    </header>
+                    <sheet>
+                        <group string="Penugasan">
+                            <field name="name" />
+                            <field name="jabatan" />
+                            <field name="niy" />
+                            <field name="alamat" />
+                            <field name="jam" widget="time" options="{'time_format': 'HH:mm'}" />
+                            <field name="tempat" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>    
+
+        <record id="suratmasuk_action" model="ir.actions.act_window">
+            <field name="name">Surat Masuk</field>
+            <field name="res_model">surat.masuk</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <record id="penugasan_action" model="ir.actions.act_window">
+            <field name="name">Penugasan</field>
+            <field name="res_model">data.penugasan</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="tatausaha_menu_root"
+            name="Tata Usaha"
+            sequence="100"/>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="persuratan_menu_categ" 
+            name="Persuratan" 
+            parent="tatausaha_menu_root"
+            sequence="10"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem 
+            id="suratmasuk_menu_act" 
+            name="Surat Masuk" 
+            parent="persuratan_menu_categ" 
+            action="suratmasuk_action" 
+            sequence="1"/>
+
+        <menuitem 
+            id="penugasan_menu_act" 
+            name="Penugasan" 
+            parent="persuratan_menu_categ" 
+            action="penugasan_action" 
+            sequence="2"/>
+    </data>
+</odoo>
