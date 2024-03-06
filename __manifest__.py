@@ -36,6 +36,7 @@
         'views/kurikulum_views.xml',
         'views/sarpras_views.xml',
         'views/menu_views.xml',
+        'views/penugasan_report.xml',
         
     ],
     # only loaded in demonstration mode

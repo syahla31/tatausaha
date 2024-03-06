@@ -101,7 +101,7 @@
                     </sheet>
                 </form>
             </field>
-        </record>    
+        </record>
 
         <record id="suratmasuk_action" model="ir.actions.act_window">
             <field name="name">Surat Masuk</field>

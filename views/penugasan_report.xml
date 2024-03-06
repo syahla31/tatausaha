@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <report
+            id="report_Session"
+            model="data.penugasan"
+            string="Penugasan Report"
+            report_type="qweb-pdf"
+            name="tatausaha.penugasan"
+            file="tatausaha.penugasan"
+        />
+
+        <template id="penugasan">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2 style="text-center">Report Penugasan</h2>
+                            <p>
+                                <b>Nama</b>
+                                <t>:</t>
+                                <span t-field="o.name"></span>
+                            </p>
+                            <p>
+                                <b>Jabatan</b>
+                                <t>:</t>
+                                <span t-field="o.jabatan"></span>
+                            </p>
+                            <p>
+                                <b>NIY</b>
+                                <t>:</t>
+                                <span t-field="o.niy"></span>
+                            </p>
+                            <p>
+                                <b>Alamat</b>
+                                <t>:</t>
+                                <span t-field="o.alamat"></span>
+                            </p>
+                            <p>
+                                <b>Waktu</b>
+                                <t>:</t>
+                                <span t-field="o.jam"></span>
+                            </p>
+                            <p>
+                                <b>Tempat</b>
+                                <t>:</t>
+                                <span t-field="o.tempat"></span>
+                            </p>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
