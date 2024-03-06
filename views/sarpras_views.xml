@@ -33,17 +33,5 @@
             <field name="view_mode">tree,form</field>
         </record>
         
-        <menuitem
-            id="tatausaha_menu_root"
-            name="Tata Usaha"
-            sequence="100"/>
-
-        <!-- This Menu Item must have a parent and an action -->
-        <menuitem 
-            id="sarpras_menu_act" 
-            name="Sarpras" 
-            parent="tatausaha_menu_root" 
-            action="sarpras_action" 
-            sequence="11"/>
     </data>
 </odoo>

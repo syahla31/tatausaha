@@ -13,6 +13,9 @@ class data_suratmasuk(models.Model):
     keterangan = fields.Char(string='Keterangan')
     file_surat = fields.Binary(string='File Surat')
     
+class data_suratkeluar(models.Model):
+    _name = 'surat.keluar'
+    _description = 'surat keluar'
 
 class data_penugasan(models.Model):
     _name = 'data.penugasan'
