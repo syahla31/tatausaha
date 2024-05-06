@@ -71,7 +71,7 @@
             </field>
         </record>    
 
-        <record id="penugasan_tree" model="ir.ui.view">
+        <!-- <record id="penugasan_tree" model="ir.ui.view">
             <field name="name">Penugasan</field>
             <field name="model">data.penugasan</field>
             <field name="arch" type="xml">
@@ -110,7 +110,7 @@
                     </sheet>
                 </form>
             </field>
-        </record>
+        </record> -->
 
         <record id="suratmasuk_action" model="ir.actions.act_window">
             <field name="name">Surat Masuk</field>
@@ -124,11 +124,11 @@
             <field name="view_mode">tree,form</field>
         </record>
         
-        <record id="penugasan_action" model="ir.actions.act_window">
+        <!-- <record id="penugasan_action" model="ir.actions.act_window">
             <field name="name">Penugasan</field>
             <field name="res_model">data.penugasan</field>
             <field name="view_mode">tree,form</field>
-        </record>
+        </record> -->
         
     </data>
 </odoo>

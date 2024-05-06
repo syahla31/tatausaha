@@ -27,18 +27,17 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/sarpras_views.xml',
         'views/dapodik_views.xml',
         'views/humas_views.xml',
-        'views/kepegawaian_views.xml',
+        'views/pengembangan_views.xml',
         'views/persuratan_views.xml',
         'views/kesiswaaan_views.xml',
         'views/keuangan_views.xml',
         'views/kurikulum_views.xml',
-        'views/sarpras_views.xml',
         'views/menu_views.xml',
         'views/penugasan_report.xml',
         'views/persuratan_templates.xml',
-        
     ],
     # only loaded in demonstration mode
     'demo': [
